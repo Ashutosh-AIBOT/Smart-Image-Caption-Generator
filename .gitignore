@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+uploads/
+*.h5
+*.pkl
+.env
+venv/

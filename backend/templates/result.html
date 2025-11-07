@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Caption Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Generated Caption</h1>
+  </header>
+
+  <main>
+    <div class="result-container">
+      <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image">
+      <h2>{{ caption }}</h2>
+      <a href="{{ url_for('index') }}" class="btn">Try Another Image</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart Image Caption AI</p>
+  </footer>
+</body>
+</html>

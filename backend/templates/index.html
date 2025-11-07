@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Image Caption Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Smart Image Caption Generator</h1>
+    <p>Powered by Deep Learning – Generate intelligent captions for your images.</p>
+  </header>
+
+  <main>
+    <div class="upload-container">
+      <form method="post" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+        <label for="file-upload" class="upload-label">
+          <span>Click to choose an image</span>
+          <input id="file-upload" type="file" name="file" accept="image/*" required>
+        </label>
+        <button type="submit" class="btn">Generate Caption</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart Image Caption AI | Built with ❤️ by Ashutosh</p>
+  </footer>
+</body>
+</html>
